@@ -5,14 +5,14 @@ from .forms import CommentForm
 
 # Create your views here.
 def blog_index(request):
-    posts = Post.objects.all().order_by('-created_on')
+    posts = Post.objects.all().order_by('-create_on')
     context = {"posts": posts, }
     return render(request, "blog_index.html", context)
 
 
 def blog_category(request, category):
     posts = Post.objects.filter(categories__name__contains=category) \
-        .order_by('-created_on')
+        .order_by('-create_on')
     context = {
         'category': category,
         'posts': posts,
