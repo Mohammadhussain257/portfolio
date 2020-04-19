@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # My App
     'myportfolio',
+    'user',
     'blog',
     #Third pary app
     'bootstrap4',
